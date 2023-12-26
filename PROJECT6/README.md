@@ -5,5 +5,5 @@
 
 ### -r (or -R): Copy directories recursively. This is necessary when copying directories and their contents.
 
-
- ![Alt text](<cp cmd.PNG>)
+![Alt text](<images/cp cmd.PNG>)
+ 
