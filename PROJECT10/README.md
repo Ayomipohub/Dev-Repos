@@ -1,7 +1,8 @@
- # 'touch' COMMAND
+ # `rm` COMMAND
 
 
- ## touch command is used to create empty files and update the access and modification timestamps of existing files.
+ ## rm command is used to remove (delete) files and directories.
 
 
-![Alt text](<images/touch cmd.PNG>)
+
+![Alt text](<images/rm cmd.PNG>)

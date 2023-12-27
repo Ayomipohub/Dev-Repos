@@ -1,9 +1,9 @@
-# `grep` COMMAND
+# `find` command
 
 
-## grep command  is a powerful tool used for searching and pattern matching in text files.
+## find command is a powerful tool for searching and locating files and directories based on various criteria.
 
 
 
 
-![Alt text](<images/grep cmd.PNG>)
+![Alt text](<images/find cmd.PNG>)

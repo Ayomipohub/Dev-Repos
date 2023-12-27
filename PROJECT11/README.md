@@ -1,8 +1,7 @@
-# `locate` COMMAND
+# 'touch' COMMAND
 
 
-## locate command  is used to quickly find the location of files and directories on the system.
+ ## touch command is used to create empty files and update the access and modification timestamps of existing files.
 
 
-
-![Alt text](<images/locate cmd.PNG>)
+![Alt text](<images/touch cmd.PNG>)

@@ -1,9 +1,8 @@
-# `find` command
+# `locate` COMMAND
 
 
-## find command is a powerful tool for searching and locating files and directories based on various criteria.
+## locate command  is used to quickly find the location of files and directories on the system.
 
 
 
-
-![Alt text](<images/find cmd.PNG>)
+![Alt text](<images/locate cmd.PNG>)
