@@ -1,4 +1,4 @@
-# 'locate' COMMAND
+# `locate` COMMAND
 
 
 ## locate command  is used to quickly find the location of files and directories on the system.
