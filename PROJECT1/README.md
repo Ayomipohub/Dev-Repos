@@ -13,8 +13,8 @@ When you execute this command 'sudo apt upgrade', apt will check for updates for
 
 ## pwd entails print out name of current/working directory.When you execute this command, it will output the absolute path of the directory you are currently in
 
+![Alt text](<pwd cmd.PNG>)
 
-![Alt text](<images/pwd cmd.PNG>)
 
 
 The pwd command is a helpful tool for understanding your location within the directory structure, and it is commonly used in shell scripts and command-line operations.
@@ -27,17 +27,15 @@ The pwd command is a helpful tool for understanding your location within the dir
 
 ### If you run cd without any arguments, it will take you to your home directory. If you provide a directory name as an argument, it will change your current working directory to that specified directory.
 
+![Alt text](<cd cmd2.PNG>)
 
-![Alt text](<images/cd cmd2.PNG>)
 
 # 'ls' COMMAND
 
 ## ls command is used to list the files and directories in the current working directory. It provides a way to view the contents of a directory from the command line.
-
-
-![Alt text](<images/ls cmd1.PNG>)
+![Alt text](<ls cmd1.PNG>)
 
 
 If you run ls without any arguments, it will list the files and directories in the current working directory.
+![Alt text](<ls cmd 2.PNG>)
 
-![Alt text](<images/ls cmd 2.PNG>)
