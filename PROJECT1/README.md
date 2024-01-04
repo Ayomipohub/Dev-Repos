@@ -192,12 +192,75 @@ If you run ls without any arguments, it will list the files and directories in t
 ![Alt text](<images/echo cmd.PNG>)
 
 
+# `zip and unzip` command
+
+## zip command is used in Unix-like operating systems, including Linux, to compress and archive files into a Zip format. while unzip is used to extract and decompress files from a ZIP archive. 
+
+![Alt text](<images/zip cmd.PNG>)
+
+
+# `hostame` command
+## hostname is used to query or set the system's host name.
+
+![Alt text](images/hostname.PNG)
+
+
+# `useradd and userdel` command
+
+## user add command is used to create a new user account. It is a command-line utility that adds or updates user information in the system files. while user del is used to delete a user account. When a user account is deleted using userdel, the user's home directory and mail spool may also be deleted, depending on the options used. 
+![Alt text](<images/useradd cmd.PNG>)
+
+
+# `apt-get` command
+
+## apt-get is a package management tool used in Debian-based Linux distributions, including Ubuntu. It is part of the Advanced Package Tool (APT) system and is used for installing, upgrading, and managing software packages on a Linux system. 
+
+![Alt text](images/apt-get.PNG)
+
+
+# `nano, vi , jed` command
+
+## nano is a simple and user-friendly text editor. It is designed to be easy for beginners to use and provides a straightforward interface.
+
+
+![Alt text](<images/nano cmd.PNG>)
+
+
+### vi  is a powerful and widely used text editor that is part of most Unix-like systems. It has modes for editing, command, and visual modes, which provide different functionalities.
+![Alt text](<images/vi cmd.PNG>)
+
+
+#### jed is a programmer's text editor that is part of the SLang library. It provides features similar to Emacs and is extensible through the S-Lang scripting language.
+![Alt text](<images/jed cmd.PNG>)
 
 
 
+# `alias, unalias` command
+
+## alias and unalias are used to create and remove command aliases. An alias is a user-defined shortcut or alternate name for a command or a sequence of commands. Aliases can be helpful for creating shorter or more convenient names for commonly used commands.
+
+![Alt text](<images/alias cmd.PNG>)
+
+
+# `su` command
+## su command short for "switch user" or "substitute user," is used in Unix-like operating systems, including Linux, to change the current user context to that of another user. By default, if no specific user is specified, it attempts to switch to the superuser (root) account.
+
+![Alt text](<images/su cmd.PNG>)
 
 
 
+# `htop` command
+
+## The htop command is an interactive process viewer and system monitor for Linux. It provides a more user-friendly and feature-rich alternative to the traditional top command. htop allows you to view and manage system processes in a dynamic and visually appealing way.
+
+![Alt text](<images/htop cmd.PNG>)
+
+
+# `ps` command
+
+## The ps command is used to display information about currently running processes. It provides a snapshot of the processes running on the system at the time the command is executed. 
+
+![Alt text](<images/pid cmd.PNG>)
 
 
 
