@@ -187,6 +187,12 @@ If you run ls without any arguments, it will list the files and directories in t
 ![Alt text](<images/man cmd.PNG>)
 
 
+# `echo` command
+## echo command  is used to display text or variables in the terminal. It is a simple command that outputs its arguments to the terminal. 
+![Alt text](<images/echo cmd.PNG>)
+
+
+
 
 
 
