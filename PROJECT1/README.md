@@ -82,6 +82,90 @@ If you run ls without any arguments, it will list the files and directories in t
 
  ![Alt text](<rm cmd.PNG>)## rm command is used to remove (delete) files and directories.
 
+# 'touch' COMMAND
+
+
+ ## touch command is used to create empty files and update the access and modification timestamps of existing files.
+![Alt text](<touch cmd.PNG>)
+
+# `locate` COMMAND
+
+
+## locate command  is used to quickly find the location of files and directories on the system.
+![Alt text](<locate cmd.PNG>)
+
+# `find` command
+
+
+## find command is a powerful tool for searching and locating files and directories based on various criteria.
+![Alt text](<find cmd.PNG>)
+
+
+# `grep` COMMAND
+
+## grep command  is a powerful tool used for searching and pattern matching in text files.
+![Alt text](<grep cmd.PNG>)
+
+# `df` COMMAND
+
+## df command is used to display information about the disk space usage on mounted file systems.
+![Alt text](<df cmd.PNG>)
+
+# `du` COMMAND
+
+## du command is used to estimate the disk space usage of files and directories. It is used to estimate the disk space usage of files and directories
+![Alt text](<du cmd.PNG>)
+
+# `head` command
+
+## head command is used to display the beginning (or "head") of a text file or the output of a command. By default, it shows the first 10 lines of a file or the output of a command. 
+![Alt text](<head cmd.PNG>)
+
+# `tail` command
+
+## tail command is used to display the end (or "tail") of a text file or the output of a command. By default, it shows the last 10 lines of a file or the output of a command.
+![Alt text](<tail cmd.PNG>)
+
+# `diff` command
+
+## diff command  is used to compare the contents of two files and display the differences between them. 
+![Alt text](<diff cmd#.PNG>)
+
+# `tar` COMMAND
+
+## tar command is used for archiving files and directories. It creates a single archive file (often compressed) that can be easily transported or stored. The name "tar" stands for "tape archive," reflecting its historical use in creating archives for tape backups. 
+![Alt text](<tar cmd.PNG>)
+
+# `chmod` COMMAND
+
+## chmod command is used to change the permissions (read, write, execute) of files and directories. 
+![Alt text](<chmod cmd.PNG>)
+
+# `jobs` command
+
+## jobs command s used to display the status of background jobs that are currently running in the shell. When you run a command in the background by appending an ampersand (&) at the end of the command, it runs asynchronously, allowing you to continue working in the shell.
+![Alt text](<images/jobs cmd.PNG>)
+
+# `kill` command
+
+## kill command is used to send signals to processes. The primary purpose of the kill command is to terminate or signal processes, allowing users to control or interrupt the execution of running programs. 
+![Alt text](<images/pid cmd.PNG>)
+![Alt text](<images/kill cmd#.PNG>)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
