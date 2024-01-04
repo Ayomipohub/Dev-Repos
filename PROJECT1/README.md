@@ -1,6 +1,6 @@
 # LINUX PRACTICE PROJECT
 
-## 'sudo' command
+## `sudo` command
 
  sudo is designed to enable a permitted user to execute a command as the superuser while providing a record of the command and its arguments for auditing purposes. It also allows system administrators to control which users are allowed to run specific commands.
 
@@ -9,7 +9,7 @@ When you execute this command 'sudo apt upgrade', apt will check for updates for
 
 ![Alt text](<images/sudo cmd.PNG>)
 
-# pwd command
+# `pwd` command
 
 ## pwd entails print out name of current/working directory.When you execute this command, it will output the absolute path of the directory you are currently in
 
@@ -30,7 +30,7 @@ The pwd command is a helpful tool for understanding your location within the dir
 
 
 
-# 'ls' COMMAND
+# `ls` COMMAND
 
 ## ls command is used to list the files and directories in the current working directory. It provides a way to view the contents of a directory from the command line.
 ![Alt text](<images/ls cmd1.PNG>)
@@ -40,13 +40,13 @@ If you run ls without any arguments, it will list the files and directories in t
 
 ![Alt text](<images/ls cmd1.PNG>)
 
-# 'cat' COMMAND
+# `cat` COMMAND
 
 ## The cat command is used  to concatenate and display the contents of one or more files. 
 ![Alt text](<images/cat cmd.PNG>)
 
 
-# The 'cp' command
+# The `cp` command
 
 
 ## The cp command is used to copy files and directories from one location to another.
@@ -55,7 +55,7 @@ If you run ls without any arguments, it will list the files and directories in t
 
 ![Alt text](<images/cp cmd.PNG>)
 
-# The 'mv' command
+# The `mv` command
 
 
 ## mv command is used to move or rename files and directories
@@ -64,14 +64,14 @@ If you run ls without any arguments, it will list the files and directories in t
 
 
 
-# mkdir command
+# `mkdir` command
 
 ## mkdir command is used to create directories (folders)
 ![Alt text](<images/mkdir cmd.PNG>)
 
 
 
-# 'rmdir' command
+# `rmdir` command
 
 ## rmdir command is used to remove empty directories. Unlike the rm command, which can delete files and non-empty directories.
 
@@ -83,7 +83,7 @@ If you run ls without any arguments, it will list the files and directories in t
 ![Alt text](<images/rm cmd.PNG>)
 
 
-# 'touch' COMMAND
+# `touch` COMMAND
 
  ## touch command is used to create empty files and update the access and modification timestamps of existing files.
 ![Alt text](<images/touch cmd.PNG>)
@@ -260,9 +260,6 @@ If you run ls without any arguments, it will list the files and directories in t
 
 ![Alt text](<images/pid cmd.PNG>)
 
-
-
-Thank you
 
 
 
