@@ -129,7 +129,7 @@ If you run ls without any arguments, it will list the files and directories in t
 # `diff` command
 
 ## diff command  is used to compare the contents of two files and display the differences between them. 
-![Alt text](<diff cmd#.PNG>)
+![Alt text](<images/diff cmd#.PNG>)
 
 # `tar` COMMAND
 
@@ -139,7 +139,7 @@ If you run ls without any arguments, it will list the files and directories in t
 # `chmod` COMMAND
 
 ## chmod command is used to change the permissions (read, write, execute) of files and directories. 
-![Alt text](<chmod cmd.PNG>)
+![Alt text](<images/chmod cmd.PNG>)
 
 # `jobs` command
 
