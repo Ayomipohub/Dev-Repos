@@ -67,44 +67,43 @@ If you run ls without any arguments, it will list the files and directories in t
 # mkdir command
 
 ## mkdir command is used to create directories (folders)
+![Alt text](<images/mkdir cmd.PNG>)
 
-![Alt text](<mkdir cmd.PNG>)
 
 
 # 'rmdir' command
 
 ## rmdir command is used to remove empty directories. Unlike the rm command, which can delete files and non-empty directories.
-![Alt text](<rmdir cmd.PNG>)
 
+![Alt text](<images/rmdir cmd.PNG>)
 
  # `rm` COMMAND
 
+## rm command is used to remove (delete) files and directories.
+![Alt text](<images/rm cmd.PNG>)
 
- ![Alt text](<rm cmd.PNG>)## rm command is used to remove (delete) files and directories.
 
 # 'touch' COMMAND
 
-
  ## touch command is used to create empty files and update the access and modification timestamps of existing files.
-![Alt text](<touch cmd.PNG>)
+![Alt text](<images/touch cmd.PNG>)
 
 # `locate` COMMAND
 
-
 ## locate command  is used to quickly find the location of files and directories on the system.
-![Alt text](<locate cmd.PNG>)
+![Alt text](<images/locate cmd.PNG>)
 
 # `find` command
 
 
 ## find command is a powerful tool for searching and locating files and directories based on various criteria.
-![Alt text](<find cmd.PNG>)
+![Alt text](<images/find cmd.PNG>)
 
 
 # `grep` COMMAND
 
 ## grep command  is a powerful tool used for searching and pattern matching in text files.
-![Alt text](<grep cmd.PNG>)
+![Alt text](<images/grep cmd.PNG>)
 
 # `df` COMMAND
 
