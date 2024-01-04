@@ -108,22 +108,22 @@ If you run ls without any arguments, it will list the files and directories in t
 # `df` COMMAND
 
 ## df command is used to display information about the disk space usage on mounted file systems.
-![Alt text](<df cmd.PNG>)
+![Alt text](<images/df cmd.PNG>)
 
 # `du` COMMAND
 
 ## du command is used to estimate the disk space usage of files and directories. It is used to estimate the disk space usage of files and directories
-![Alt text](<du cmd.PNG>)
+![Alt text](<images/du cmd.PNG>)
 
 # `head` command
 
 ## head command is used to display the beginning (or "head") of a text file or the output of a command. By default, it shows the first 10 lines of a file or the output of a command. 
-![Alt text](<head cmd.PNG>)
+![Alt text](<images/head cmd.PNG>)
 
 # `tail` command
 
 ## tail command is used to display the end (or "tail") of a text file or the output of a command. By default, it shows the last 10 lines of a file or the output of a command.
-![Alt text](<tail cmd.PNG>)
+![Alt text](<images/tail cmd.PNG>)
 
 # `diff` command
 
