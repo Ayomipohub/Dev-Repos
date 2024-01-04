@@ -26,24 +26,24 @@ The pwd command is a helpful tool for understanding your location within the dir
 
 
 ### If you run cd without any arguments, it will take you to your home directory. If you provide a directory name as an argument, it will change your current working directory to that specified directory.
+![Alt text](<images/cd cmd2.PNG>)
 
-![Alt text](<cd cmd2.PNG>)
 
 
 # 'ls' COMMAND
 
 ## ls command is used to list the files and directories in the current working directory. It provides a way to view the contents of a directory from the command line.
-![Alt text](<ls cmd1.PNG>)
+![Alt text](<images/ls cmd1.PNG>)
 
 
 If you run ls without any arguments, it will list the files and directories in the current working directory.
-![Alt text](<ls cmd 2.PNG>)
 
+![Alt text](<images/ls cmd1.PNG>)
 
 # 'cat' COMMAND
 
 ## The cat command is used  to concatenate and display the contents of one or more files. 
-![Alt text](<cat cmd.PNG>)
+![Alt text](<images/cat cmd.PNG>)
 
 
 # The 'cp' command
@@ -52,15 +52,15 @@ If you run ls without any arguments, it will list the files and directories in t
 ## The cp command is used to copy files and directories from one location to another.
 
 ### -r (or -R): Copy directories recursively. This is necessary when copying directories and their contents.
-![Alt text](<cp cmd.PNG>)
 
+![Alt text](<images/cp cmd.PNG>)
 
 # The 'mv' command
 
 
 ## mv command is used to move or rename files and directories
 
-![Alt text](<mv cmd.PNG>)
+![Alt text](<images/mv cmd.PNG>)
 
 
 
