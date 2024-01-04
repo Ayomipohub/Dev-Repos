@@ -234,7 +234,6 @@ If you run ls without any arguments, it will list the files and directories in t
 ![Alt text](<images/jed cmd.PNG>)
 
 
-
 # `alias, unalias` command
 
 ## alias and unalias are used to create and remove command aliases. An alias is a user-defined shortcut or alternate name for a command or a sequence of commands. Aliases can be helpful for creating shorter or more convenient names for commonly used commands.
@@ -246,7 +245,6 @@ If you run ls without any arguments, it will list the files and directories in t
 ## su command short for "switch user" or "substitute user," is used in Unix-like operating systems, including Linux, to change the current user context to that of another user. By default, if no specific user is specified, it attempts to switch to the superuser (root) account.
 
 ![Alt text](<images/su cmd.PNG>)
-
 
 
 # `htop` command
