@@ -151,6 +151,42 @@ If you run ls without any arguments, it will list the files and directories in t
 ![Alt text](<images/pid cmd.PNG>)
 ![Alt text](<images/kill cmd#.PNG>)
 
+# `ping` command
+
+## ping command command is a network utility tool used to test the reachability of a host on an Internet Protocol (IP) network and to measure the round-trip time for messages sent from the originating host to a destination computer.
+![Alt text](<images/ping cmd.PNG>)
+
+# `wget` command
+
+## wget command is a command-line utility for downloading files from the web. It is available on Unix-like operating systems, including Linux, and can be used to retrieve files using various protocols such as HTTP, HTTPS, FTP, and FTPS. 
+
+![Alt text](<images/wget cmd.PNG>)
+
+
+# `uname` command
+## uname command is used to display system information. It provides details about the operating system and the system hardware.
+
+![Alt text](<images/uname cmd.PNG>)
+
+
+# `top` command 
+
+## top command is a real-time system monitoring tool that provides an interactive, dynamic view of system processes. It displays a constantly updated list of processes, their resource usage, and other system information.
+![Alt text](<images/top cmd.PNG>)
+
+
+# `history` command
+
+## history command is used to display a list of previously executed commands from the command-line history. It provides a record of the commands that have been entered in the current session or in previous sessions, depending on the configuration.
+![Alt text](<images/history cmd.PNG>)
+
+
+# `man` command
+
+## man command is used to display the manual pages (documentation) for commands, utilities, and system functions. The manual pages provide detailed information about how to use and understand a particular command or feature. 
+![Alt text](<images/man cmd.PNG>)
+
+
 
 
 
