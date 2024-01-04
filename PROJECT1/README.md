@@ -39,3 +39,50 @@ The pwd command is a helpful tool for understanding your location within the dir
 If you run ls without any arguments, it will list the files and directories in the current working directory.
 ![Alt text](<ls cmd 2.PNG>)
 
+
+# 'cat' COMMAND
+
+## The cat command is used  to concatenate and display the contents of one or more files. 
+![Alt text](<cat cmd.PNG>)
+
+
+# The 'cp' command
+
+
+## The cp command is used to copy files and directories from one location to another.
+
+### -r (or -R): Copy directories recursively. This is necessary when copying directories and their contents.
+![Alt text](<cp cmd.PNG>)
+
+
+# The 'mv' command
+
+
+## mv command is used to move or rename files and directories
+
+![Alt text](<mv cmd.PNG>)
+
+
+
+# mkdir command
+
+## mkdir command is used to create directories (folders)
+
+![Alt text](<mkdir cmd.PNG>)
+
+
+# 'rmdir' command
+
+## rmdir command is used to remove empty directories. Unlike the rm command, which can delete files and non-empty directories.
+![Alt text](<rmdir cmd.PNG>)
+
+
+ # `rm` COMMAND
+
+
+ ![Alt text](<rm cmd.PNG>)## rm command is used to remove (delete) files and directories.
+
+
+
+
+
