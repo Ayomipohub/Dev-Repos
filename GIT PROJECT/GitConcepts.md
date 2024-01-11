@@ -1,8 +1,8 @@
 # **Git**
  
-## `Introduction to Git`
+## Introduction to Git
 - What is Git?
-- Functions of Git
+- Essential Functions of Git
 - Application of Git
 - Requirements in learning Git
 - Expected Goals to be achieved at the end of Git project
