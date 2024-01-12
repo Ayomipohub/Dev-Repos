@@ -109,7 +109,7 @@ Download the Git for Windows installer from the official Git website. Run the in
 -Homebrew (Package Manager):
 Open the Terminal app.
 Install Git using Homebrew by running the following command:
-> brew install git
+`brew install git` 
 
 ### Linux:
 Debian/Ubuntu:
@@ -119,4 +119,24 @@ Run the following commands:
  sudo apt update
  sudo apt install git
 ```
+![Alt text](images/git-1.PNG)
+
+### Checking the Installation:
+After installation, you can verify that Git is installed by opening a terminal or command prompt and running the following command:
+`git --version`
+![Alt text](<images/git ver.PNG>)
+
+
+
+## Git commands
+- git init: Initialize a new Git repository.
+- git clone: Create a copy of a remote repository on your local machine.
+- git add: Stage changes for the next commit.
+- git commit: Record changes to the repository.
+- git push: Push local changes to a remote repository.
+- git pull: Fetch changes from a remote repository and merge them into the local branch.
+- git branch: Create, list, or delete branches.
+- git merge: Merge changes from one branch into another.
+
+
 
