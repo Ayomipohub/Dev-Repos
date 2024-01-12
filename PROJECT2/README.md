@@ -7,7 +7,11 @@ Git is a distributed version control system (DVCS) that is widely used for track
 *Git is open source because its source code is made freely available for anyone to modify and use, aside from its creator. Open-source projects are built and maintained collectively by different developers in different locations.*
 
 
+
+
+
 **Essential Functions of Git**
+
 Git is of paramount importance in modern software development and collaborative projects. Its significance arises from various features and capabilities that address challenges inherent in version control and team collaboration. Here are key reasons why Git is crucial:
 
 `Version Control`:
@@ -47,6 +51,8 @@ Cross-Platform Compatibility: Git is platform-agnostic and works seamlessly acro
 
 
 
+
+
 **Application of Git**
 
 `Software Development`:
@@ -82,4 +88,34 @@ Cross-Platform Compatibility: Git is platform-agnostic and works seamlessly acro
 `Open Source Contributions`:
 - Contributing to Projects: Open source projects often use Git to manage contributions from various contributors. Developers can fork repositories, make changes, and create pull requests to propose changes to the original project.
 - Issue Tracking: Git hosting platforms provide issue tracking features, allowing contributors to report issues, suggest enhancements, and discuss development topics.
+
+
+
+**Requirements in learning Git#**
+- Get a good laptop
+- Knowledge of linux and its command
+- Download a an IDE or text editor e.g Vs code, Vim or nano.
+- Download Git sofware and install on your operating system
+- Create a Github account: https://github.com/signup?source=login
+
+
+## GIT INSTALLATION
+
+### Windows:
+- Git GUI (Graphical Interface):
+Download the Git for Windows installer from the official Git website. Run the installer and follow the on-screen instructions.
+
+ ### macOS:
+-Homebrew (Package Manager):
+Open the Terminal app.
+Install Git using Homebrew by running the following command:
+> brew install git
+
+### Linux:
+Debian/Ubuntu:
+Open a terminal.
+Run the following commands:
+> sudo apt update
+> sudo apt install git
+
 
