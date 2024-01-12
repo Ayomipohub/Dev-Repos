@@ -175,24 +175,30 @@ git commit -m "initial commit"
 iii. ***Working with Branches***
 
 -  make a new branch
+   
     `git checkout -b master`
+
 -  list new branch
+    
     `git branch`
 
 ![Alt text](<images/nw branch.PNG>)
 
 -  revert back to old brnach
+   
     `git checkout main(old)`
 
 ![Alt text](<images/old branch.PNG>)
 
 
 -   Merging a branch into another branch: running content of branch master into main
+     
      `git merge main`
 
 ![Alt text](<images/git merge.PNG>)
 
 - Deleting a Git branch
+  
    `git branch -d master`  
 
 ![Alt text](<images/del branch.PNG>)   
