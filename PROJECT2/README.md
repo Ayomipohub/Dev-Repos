@@ -3,10 +3,8 @@
 ## Introduction to Git
 
 **What is Git?**
-Git is a distributed version control system (DVCS) that is widely used for tracking changes in source code during software development. It allows multiple developers to collaborate on projects, managing their work, and tracking changes over time. Developed by Linus Torvalds in 2005, Git has become one of the most popular version control systems in use today.
+Git is a *distributed* version control system (DVCS) that is widely used for tracking changes in source code during software development. It allows multiple developers to collaborate on projects, managing their work, and tracking changes over time. Developed by Linus Torvalds in 2005, Git has become one of the most popular version control systems in use today.
 *Git is open source because its source code is made freely available for anyone to modify and use, aside from its creator. Open-source projects are built and maintained collectively by different developers in different locations.*
-
-
 
 
 
@@ -141,3 +139,35 @@ After installation, you can verify that Git is installed by opening a terminal o
 
 
 
+## Git concepts
+
+i. ***Repositories***
+```
+mkdir DevOps
+cd DevOps
+git init
+```
+
+![Alt text](images/init.PNG)
+
+> This is simply saying:
+-   create new folder/Directory
+-   enter into the folder
+-   initialize the folder into git repository
+
+
+ii. ***First commit***
+```
+touch index.txt
+echo "exited to make my first commit" >index.txt
+git add .
+git commit -m "initial commit"
+```
+
+![Alt text](commit#.PNG)
+
+>This is simply saying:
+-  Create a text file in the current directory
+-  Write any sentence of your choice inside the text file
+-  Add your changes to git stagging
+-  Commit your changes to git
