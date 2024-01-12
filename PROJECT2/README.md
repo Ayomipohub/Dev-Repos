@@ -164,7 +164,7 @@ git add .
 git commit -m "initial commit"
 ```
 
-![Alt text](commit#.PNG)
+![Alt text](images/commit#.PNG)
 
 >This is simply saying:
 -  Create a text file in the current directory
