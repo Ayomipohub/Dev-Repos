@@ -124,6 +124,7 @@ Run the following commands:
 ### Checking the Installation:
 After installation, you can verify that Git is installed by opening a terminal or command prompt and running the following command:
 `git --version`
+
 ![Alt text](<images/git ver.PNG>)
 
 
