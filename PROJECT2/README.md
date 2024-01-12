@@ -115,7 +115,8 @@ Install Git using Homebrew by running the following command:
 Debian/Ubuntu:
 Open a terminal.
 Run the following commands:
-> sudo apt update
-> sudo apt install git
-
+ ```
+ sudo apt update
+ sudo apt install git
+```
 
