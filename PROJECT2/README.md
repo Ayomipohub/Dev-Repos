@@ -163,8 +163,8 @@ echo "exited to make my first commit" >index.txt
 git add .
 git commit -m "initial commit"
 ```
-
 ![Alt text](images/commit#.PNG)
+
 
 >This is simply saying:
 -  Create a text file in the current directory
@@ -191,6 +191,21 @@ iii. ***Working with Branches***
 ![Alt text](<images/old branch.PNG>)
 
 
+
+-   Merging a branch into another branch: running content of branch master into main
+     
+     `git merge main`
+
+![Alt text](<images/git merge.PNG>)
+
+- Deleting a Git branch
+  
+   `git branch -d master`  
+
+![Alt text](<images/del branch.PNG>)   
+
+
+
 iv. ***Working with Remote Repositories for Collaboration***
 
 ### Collaboration in Git often involves the use of remote repositories. A remote repository is a version of your project hosted on a server or an online platform, allowing multiple developers to work together on the same codebase. Git hosting services like GitHub, GitLab, and Bitbucket are popular platforms for managing remote repositories. 
@@ -214,14 +229,3 @@ kindly click [here](https://github.com/signup?source=login) account.
 
 
 
--   Merging a branch into another branch: running content of branch master into main
-     
-     `git merge main`
-
-![Alt text](<images/git merge.PNG>)
-
-- Deleting a Git branch
-  
-   `git branch -d master`  
-
-![Alt text](<images/del branch.PNG>)   
