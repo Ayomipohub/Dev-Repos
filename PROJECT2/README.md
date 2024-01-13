@@ -246,4 +246,8 @@ To clone a remote Git repository, you can use the git clone command. Here's the 
 ![Alt text](<images/git clone.PNG>)
 
 
+`console.log('Welcome to darey.io')`
+
+
+
 
