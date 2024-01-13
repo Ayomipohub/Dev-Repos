@@ -166,6 +166,7 @@ git commit -m "initial commit"
 
 ![Alt text](images/commit#.PNG)
 
+
 >This is simply saying:
 -  Create a text file in the current directory
 -  Write any sentence of your choice inside the text file
