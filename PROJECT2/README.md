@@ -191,6 +191,29 @@ iii. ***Working with Branches***
 ![Alt text](<images/old branch.PNG>)
 
 
+iv. ***Working with Remote Repositories for Collaboration***
+
+### Collaboration in Git often involves the use of remote repositories. A remote repository is a version of your project hosted on a server or an online platform, allowing multiple developers to work together on the same codebase. Git hosting services like GitHub, GitLab, and Bitbucket are popular platforms for managing remote repositories. 
+
+
+1. Creating a Git account:
+kindly click [here](https://github.com/signup?source=login) account.
+
+![Alt text](<images/github acc.PNG>)
+
+
+2. Creat A New Repository
+-  Log in to your GitLab account.
+-  Click on the "+" button in the top navigation bar and select "New project."
+-  Fill in the project name, description, and other settings.
+-  Click the "Create project" button.
+
+![Alt text](<images/create repo.PNG>)
+
+
+
+
+
 -   Merging a branch into another branch: running content of branch master into main
      
      `git merge main`
