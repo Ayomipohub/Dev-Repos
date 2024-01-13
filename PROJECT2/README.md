@@ -236,6 +236,6 @@ kindly click [here](https://github.com/signup?source=login) account.
 
 - pushing the content to remote repository
 
-
 ![Alt text](<images/git push.PNG>)
+
 
