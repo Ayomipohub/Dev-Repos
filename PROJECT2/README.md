@@ -163,7 +163,7 @@ echo "exited to make my first commit" >index.txt
 git add .
 git commit -m "initial commit"
 ```
-![Alt text](images/commit#.PNG)
+![Alt text](<images/git commit.PNG>)
 
 
 >This is simply saying:
@@ -226,6 +226,16 @@ kindly click [here](https://github.com/signup?source=login) account.
 ![Alt text](<images/create repo.PNG>)
 
 
+3. Pushing your local Git Repository to your Remote Git Repository
+
+![Alt text](<images/git remo.PNG>)
 
 
+![Alt text](<images/git rem.PNG>)
+
+
+- pushing the content to remote repository
+
+
+![Alt text](<images/git push#.PNG>)
 
