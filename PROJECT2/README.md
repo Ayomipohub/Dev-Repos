@@ -239,3 +239,11 @@ kindly click [here](https://github.com/signup?source=login) account.
 ![Alt text](<images/git push.PNG>)
 
 
+4. Cloning Remote Git Repository
+To clone a remote Git repository, you can use the git clone command. Here's the basic syntax:
+`git clone <repository_url>`
+
+![Alt text](<images/git clone.PNG>)
+
+
+
