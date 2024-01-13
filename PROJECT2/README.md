@@ -94,7 +94,7 @@ Cross-Platform Compatibility: Git is platform-agnostic and works seamlessly acro
 - Knowledge of linux and its command
 - Download a an IDE or text editor e.g Vs code, Vim or nano.
 - Download Git sofware and install on your operating system
-- Create a Github account: https://github.com/signup?source=login
+- Create a Github account:[GitHub](https://github.com/signup?source=login)
 
 
 ## GIT INSTALLATION
