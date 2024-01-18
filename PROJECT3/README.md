@@ -49,6 +49,7 @@
 - Function: Provides the foundational operating system for the entire stack.
 
 - Key Features:
+   
    *Stability*: Linux is known for its stability and reliability.
    *Security*: Linux offers robust security features, including user permissions and firewall capabilities.
    *Open Source*: Linux is open-source and allows for customization and optimization.
@@ -59,6 +60,7 @@
 - Function: Serves as the web server to handle HTTP requests and deliver web content to clients.
 
 - Key Features:
+   
    *HTTP Server*: Apache is a widely-used HTTP server that supports the HTTP and HTTPS protocols.
    *Virtual Hosting*: Allows hosting multiple websites on a single server.
    *Modules*: Apache supports modules for extending functionality, such as mod_rewrite for URL rewriting.
@@ -69,6 +71,7 @@
 - Function: Manages and stores data in a relational database.
 
 - Key Features:
+   
    *Relational Database*: MySQL is a relational database management system (RDBMS).
    *SQL Support*: Supports the Structured Query Language (SQL) for database operations.
    *ACID Compliance*: Ensures data integrity through Atomicity, Consistency, Isolation, and Durability.
@@ -79,6 +82,7 @@
 - Function: Handles server-side scripting for dynamic content generation.
 
 - Key Features:
+   
    *Server-Side Scripting*: Enables the execution of scripts on the server to generate dynamic web content.
    *Integration*: PHP, Python, or Perl are integrated with HTML to create dynamic web pages.
    *Extensibility*: Supports the use of additional libraries and frameworks for web development.   
