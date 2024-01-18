@@ -44,7 +44,7 @@
 
   > Here are the essential functions of each component in the LAMP stack:
 
-  **Linux (Operating System)**:
+  1. **Linux (Operating System)**:
 
 - Function: Provides the foundational operating system for the entire stack.
 
@@ -54,7 +54,7 @@
    *Open Source*: Linux is open-source and allows for customization and optimization.
 
 
-**Apache (Web Server)**:
+2. **Apache (Web Server)**:
 
 - Function: Serves as the web server to handle HTTP requests and deliver web content to clients.
 
@@ -64,7 +64,7 @@
    *Modules*: Apache supports modules for extending functionality, such as mod_rewrite for URL rewriting.
 
 
-**MySQL (Database Management System)**:
+3. **MySQL (Database Management System)**:
 
 - Function: Manages and stores data in a relational database.
 
@@ -74,7 +74,7 @@
    *ACID Compliance*: Ensures data integrity through Atomicity, Consistency, Isolation, and Durability.
 
 
-**PHP/Python/Perl (Scripting/Programming Language)**:
+4. **PHP/Python/Perl (Scripting/Programming Language)**:
 
 - Function: Handles server-side scripting for dynamic content generation.
 
@@ -82,3 +82,5 @@
    *Server-Side Scripting*: Enables the execution of scripts on the server to generate dynamic web content.
    *Integration*: PHP, Python, or Perl are integrated with HTML to create dynamic web pages.
    *Extensibility*: Supports the use of additional libraries and frameworks for web development.   
+
+
