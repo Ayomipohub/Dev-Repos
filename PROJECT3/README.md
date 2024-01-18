@@ -9,30 +9,29 @@
 
 1. LAMP Stack:
 
--   Components: Linux (Operating System),Apache (Web Server), MySQL (Database), PHP/Python/Perl,
+ >  Components: Linux (Operating System),Apache (Web Server), MySQL (Database), PHP/Python/Perl,
     (Server-Side  Scripting)
 
--   Use Cases: Traditional and dynamic web applications.
+  Use Cases: Traditional and dynamic web applications.
 
 
 2. MEAN Stack:
 
--   Components: MongoDB (NoSQL Database), Express.js (Web Application Framework), Angular (Front-End Framework)
-     Node.js (JavaScript Runtime for Server-Side)
--   Use Cases: Real-time applications, single-page applications (SPAs).
+ >   Components: MongoDB (NoSQL Database), Express.js (Web Application Framework), Angular (Front-End Framework), Node.js (JavaScript Runtime for Server-Side)
+ >  Use Cases: Real-time applications, single-page applications (SPAs).
 
 
 3. MERN Stack:
 
--   Components: MongoDB (NoSQL Database), Express.js (Web Application Framework), 
+ >  Components: MongoDB (NoSQL Database), Express.js (Web Application Framework), 
      React.js (Front-End Library), Node.js (JavaScript Runtime for Server-Side)
 
--   Use Cases:Modern web applications, SPAs.
+ >  Use Cases:Modern web applications, SPAs.
 
 
 4. MEVN Stack:
 
--   Components: MongoDB (NoSQL Database), Express.js (Web Application Framework), 
+ >   Components: MongoDB (NoSQL Database), Express.js (Web Application Framework), 
      Vue.js (Front-End Framework), Node.js (JavaScript Runtime for Server-Side)
 
--   Use Cases: Modern web applications, SPAs.
+ >   Use Cases: Modern web applications, SPAs.
