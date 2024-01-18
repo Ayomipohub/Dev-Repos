@@ -46,41 +46,41 @@
 
   1. **Linux (Operating System)**:
 
-- Function: Provides the foundational operating system for the entire stack.
+    - Function: Provides the foundational operating system for the entire stack.
 
-- Key Features:
+    - Key Features:
    
-   *Stability*: Linux is known for its stability and reliability.
+        *Stability*: Linux is known for its stability and reliability.
    
-   *Security*: Linux offers robust security features, including user permissions and firewall capabilities.
+        *Security*: Linux offers robust security features, including user permissions and firewall capabilities.
   
-   *Open Source*: Linux is open-source and allows for customization and optimization.
+        *Open Source*: Linux is open-source and allows for customization and optimization.
 
 
 2. **Apache (Web Server)**:
 
-- Function: Serves as the web server to handle HTTP requests and deliver web content to clients.
+    - Function: Serves as the web server to handle HTTP requests and deliver web content to clients.
 
-- Key Features:
+    - Key Features:
    
-   *HTTP Server*: Apache is a widely-used HTTP server that supports the HTTP and HTTPS protocols.
+        *HTTP Server*: Apache is a widely-used HTTP server that supports the HTTP and HTTPS protocols.
    
-   *Virtual Hosting*: Allows hosting multiple websites on a single server.
+        *Virtual Hosting*: Allows hosting multiple websites on a single server.
    
-   *Modules*: Apache supports modules for extending functionality, such as mod_rewrite for URL rewriting.
+        *Modules*: Apache supports modules for extending functionality, such as mod_rewrite for URL rewriting.
 
 
 3. **MySQL (Database Management System)**:
 
-- Function: Manages and stores data in a relational database.
+    - Function: Manages and stores data in a relational database.
 
-- Key Features:
+    - Key Features:
    
-   *Relational Database*: MySQL is a relational database management system (RDBMS).
+        *Relational Database*: MySQL is a relational database management system (RDBMS).
    
-   *SQL Support*: Supports the Structured Query Language (SQL) for database operations.
+        *SQL Support*: Supports the Structured Query Language (SQL) for database operations.
    
-   *ACID Compliance*: Ensures data integrity through Atomicity, Consistency, Isolation, and Durability.
+        *ACID Compliance*: Ensures data integrity through Atomicity, Consistency, Isolation, and Durability.
 
 
 4. **PHP/Python/Perl (Scripting/Programming Language)**:
