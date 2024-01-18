@@ -85,14 +85,14 @@
 
 4. **PHP/Python/Perl (Scripting/Programming Language)**:
 
-- Function: Handles server-side scripting for dynamic content generation.
+    - Function: Handles server-side scripting for dynamic content generation.
 
-- Key Features:
+    - Key Features:
    
-   *Server-Side Scripting*: Enables the execution of scripts on the server to generate dynamic web content.
+        *Server-Side Scripting*: Enables the execution of scripts on the server to generate dynamic web content.
    
-   *Integration*: PHP, Python, or Perl are integrated with HTML to create dynamic web pages.
+        *Integration*: PHP, Python, or Perl are integrated with HTML to create dynamic web pages.
    
-   *Extensibility*: Supports the use of additional libraries and frameworks for web development.   
+        *Extensibility*: Supports the use of additional libraries and frameworks for web development.   
 
 
