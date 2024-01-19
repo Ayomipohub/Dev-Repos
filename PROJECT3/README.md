@@ -9,33 +9,33 @@
 
 1. LAMP Stack:
 
-  -  Components: Linux (Operating System),Apache (Web Server), MySQL (Database), PHP/Python/Perl,
+    -  Components: Linux (Operating System),Apache (Web Server), MySQL (Database), PHP/Python/Perl,
       (Server-Side  Scripting)
 
-  -  Use Cases: Traditional and dynamic web applications.
+    -  Use Cases: Traditional and dynamic web applications.
 
 
 2. MEAN Stack:
 
-  -  Components: MongoDB (NoSQL Database), Express.js (Web Application Framework), Angular (Front-End Framework), Node.js (JavaScript Runtime for Server-Side)
+    -  Components: MongoDB (NoSQL Database), Express.js (Web Application Framework), Angular (Front-End Framework), Node.js (JavaScript Runtime for Server-Side)
  
-  -  Use Cases: Real-time applications, single-page applications (SPAs).
+    -  Use Cases: Real-time applications, single-page applications (SPAs).
 
 
 3. MERN Stack:
 
-  -  Components: MongoDB (NoSQL Database), Express.js (Web Application Framework), 
+    -  Components: MongoDB (NoSQL Database), Express.js (Web Application Framework), 
      React.js (Front-End Library), Node.js (JavaScript Runtime for Server-Side)
 
-  -  Use Cases:Modern web applications, SPAs.
+    -  Use Cases:Modern web applications, SPAs.
 
 
 4. MEVN Stack:
 
-  -  Components: MongoDB (NoSQL Database), Express.js (Web Application Framework), 
+    -  Components: MongoDB (NoSQL Database), Express.js (Web Application Framework), 
      Vue.js (Front-End Framework), Node.js (JavaScript Runtime for Server-Side)
 
-  -  Use Cases: Modern web applications, SPAs.
+    v-  Use Cases: Modern web applications, SPAs.
 
 
   ## `LAMP STACK`
@@ -96,3 +96,19 @@
         *Extensibility*: Supports the use of additional libraries and frameworks for web development.   
 
 
+
+### `Application Of LAMP STACK`
+
+    1. Web Development
+    2. Content Management Systems (CMS)
+    3. E-Commerce Platforms
+    4. Customer Relationship Management (CRM) Systems
+    5. Financial Services Applications
+    6. Healthcare Applications
+
+
+### `Requirements in learning a LAMP STACK`
+
+    1. Open AWS account. [click here](https://portal.aws.amazon.com/billing/signup#/start/email) to create one.
+    2. Good knowledge of Linux
+    3. understand ssh kegs. click on this link to learn more on [SSH](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04)
