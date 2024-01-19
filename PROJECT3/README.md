@@ -109,10 +109,10 @@
 
 ### `Requirements in learning a LAMP STACK`
 
-    1. Open AWS account. [click here](https://portal.aws.amazon.com/billing/signup#/start/email) to create one.
+1.  Open AWS account. [CLICK HERE](https://portal.aws.amazon.com/billing/signup#/start/email) to create one.
     
-    2. Good knowledge of Linux
+2.  Good knowledge of Linux
     
-    3. understand ssh kegs. click on this link to learn more on [SSH](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04)
+3.  Understand ssh kegs. click on this link to learn more on [SSH](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04)
 
 
