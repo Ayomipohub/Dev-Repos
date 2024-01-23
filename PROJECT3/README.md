@@ -97,7 +97,7 @@
 
 
 
-### `Application Of LAMP STACK`
+### `Application Of LEMP STACK`
 
     1. Web Development
     2. Content Management Systems (CMS)
@@ -107,12 +107,27 @@
     6. Healthcare Applications
 
 
-### `Requirements in learning a LAMP STACK`
+### `Requirements in learning a LEMP STACK`
 
 1.  Open AWS account. [CLICK HERE](https://portal.aws.amazon.com/billing/signup#/start/email) to create one.
     
 2.  Good knowledge of Linux
     
 3.  Understand ssh kegs. click on this link to learn more on [SSH](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys-on-ubuntu-20-04)
+
+
+
+## **GETTING STATED WITH LEMP STACK**
+
+    1. Launch an Ubuntu Instance on AWS Console and SSH Into From Your Terminal
+
+
+> [!Note]
+ >Be sure to launch an Ubuntu 20.04LTS instance. Also keep your .pem key safely. Once it is lost, you will not be able to ssh into the instance again. Also, anyone with the key can have access to your instance.
+
+
+### *ssh into your ubuntu Ec2 instance*
+
+`ssh -i path/to/.pem ubuntu@public_ip_address`
 
 
