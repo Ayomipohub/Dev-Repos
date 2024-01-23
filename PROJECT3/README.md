@@ -122,6 +122,10 @@
     1. Launch an Ubuntu Instance on AWS Console and SSH Into From Your Terminal
 
 
+![Alt text](<images/ssh to instances.PNG>)
+
+
+
 > [!Note]
  >Be sure to launch an Ubuntu 20.04LTS instance. Also keep your .pem key safely. Once it is lost, you will not be able to ssh into the instance again. Also, anyone with the key can have access to your instance.
 
@@ -130,5 +134,33 @@
     
     ssh -i path/to/.pem ubuntu@public_ip_address
     
+
+    2. Installing Nginx 
+    
+### *Update Local Packages list*
+
+    sudo apt update
+
+### *Install Nginx web server*
+
+    sudo apt Nginx install
+
+### *Allow firewall for apache*
+
+    sudo ufw allow 'Nginx HTTP'
+    sudo ufw allow 22
+
+
+### *Confirm Nginx web server is sucessfully installed*
+
+    sudo systemctl status nginx
+
+
+![Alt text](<images/server status.PNG>)
+
+
+![Alt text](<images/nginx installed.PNG>)
+
+
 
 
