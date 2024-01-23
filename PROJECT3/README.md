@@ -127,8 +127,8 @@
 
 
 ### *ssh into your ubuntu Ec2 instance*
-    ```
+    
     ssh -i path/to/.pem ubuntu@public_ip_address
-    ```
+    
 
 
