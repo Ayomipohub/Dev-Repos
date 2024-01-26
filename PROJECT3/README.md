@@ -119,7 +119,7 @@
 
 ## **GETTING STATED WITH LEMP STACK**
 
-    1. Launch an Ubuntu Instance on AWS Console and SSH Into From Your Terminal
+    1. **Launch an Ubuntu Instance on AWS Console and SSH Into From Your Terminal**
 
 
 ![Alt text](<images/ssh to instances.PNG>)
@@ -135,7 +135,7 @@
     ssh -i path/to/.pem ubuntu@public_ip_address
     
 
-    2. Installing Nginx 
+    2. **Installing Nginx** 
     
 ### *Update Local Packages list*
 
@@ -160,6 +160,45 @@
 
 
 ![Alt text](<images/nginx installed.PNG>)
+
+
+
+    3. **Installing Mysql**
+`   mysql will be installed as a database to store data for our web application`
+
+        $ sudo apt install mysql-server
+
+    Log into mysql console as the root user
+
+        sudo mysql
+
+
+![Alt text](<images/sudo mysql.PNG>)
+
+
+    Setting up root password for root user using mysql native password
+
+`ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';`
+
+    Exit Mysql shell
+
+`   Exit`
+
+    Run iteractive script to secure the data base
+
+     $ sudo mysql_secure_installation
+
+     This will ask if you want to configure the VALIDATE PASSWORD PLUGIN, After the validation is completed, login to MYSQL and input the password by adding the -p flag.
+
+        sudo mysql -p
+
+
+After succcessful password validation and confimation of login, you can exit MYSQL
+
+`   Exit`
+
+
+
 
 
 
