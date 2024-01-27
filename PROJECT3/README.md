@@ -186,7 +186,7 @@
 
     Run iteractive script to secure the data base
 
-     $ sudo mysql_secure_installation
+        $ sudo mysql_secure_installation
 
      This will ask if you want to configure the VALIDATE PASSWORD PLUGIN, After the validation is completed, login to MYSQL and input the password by adding the -p flag.
 
@@ -202,7 +202,7 @@ After succcessful password validation and confimation of login, you can exit MYS
 
  *We need to install php-fpm, which stands for “PHP fastCGI process manager”, and tell Nginx to pass PHP requests to this software for processing. Additionally, we need php-mysql, a PHP module that allows PHP to communicate with MySQL-based databases. Core PHP packages will automatically be installed as dependencies.*
 
-    sudo apt install php-fpm php-mysql -y
+        sudo apt install php-fpm php-mysql -y
 
 
 `   Configuring Nginx to Use PHP Processor`
@@ -214,11 +214,11 @@ After succcessful password validation and confimation of login, you can exit MYS
      sudo mkdir /var/www/projectLEMP
 - Next, assign ownership of the directory with the $USER environment variable, which will reference your current system user:
 
-     $ sudo chown -R $USER:$USER /var/www/projectLEMP
+        $ sudo chown -R $USER:$USER /var/www/projectLEMP
 
 - Open a new configuration file in Nginx’s sites-available directory
 
-    $ sudo nano /etc/nginx/sites-available/projectLEMP
+        $ sudo nano /etc/nginx/sites-available/projectLEMP
 
 ![Alt text](<images/nginx script.PNG>)
 
@@ -227,22 +227,22 @@ After editing, save and close the file. If you’re using nano, you can do so by
 
 - Lets activate the configuration by linking the config file from Nginx’s sites-enabled directory, This will tell Nginx to use the configuration next time it is reloaded:
 
-    $ sudo ln -s /etc/nginx/sites-available/projectLEMP /etc/nginx/sites-enabled/
+        $ sudo ln -s /etc/nginx/sites-available/projectLEMP /etc/nginx/sites-enabled/
 
 - Let's test the configuration is working.
 
-    sudo nginx -t
+        sudo nginx -t
 
 ![Alt text](<images/nginx test.PNG>)
 
 
 - We need to disable default Nginx host that is currently configured to listen on port 80, for this run:
 
-    sudo unlink /etc/nginx/sites-enabled/default
+        sudo unlink /etc/nginx/sites-enabled/default
 
 - Let's reload NGINX to apply these changes.
 
-    sudo systemctl reload nginx
+        sudo systemctl reload nginx
 
 - Create an index.html file in the location /var/www/projectLEMP so that we can test that your new server block works as expected:
 
@@ -268,6 +268,90 @@ After editing, save and close the file. If you’re using nano, you can do so by
 
 
     ![Alt text](images/nginxphp.PNG)
+
+
+`Retrieving Data From Mysql Database With PHP`
+
+- create a database named example_database and a user named example_user.
+
+- First, connect to the MySQL console using the root account and password:
+
+        sudo mysql -p
+
+- Let's create a new database and user.
+
+        mysql> CREATE DATABASE `example_database `;
+
+- Now you can create a new user and grant him full privileges on the database you have just created.
+
+        mysql>  CREATE USER 'example_user'@'%' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';
+
+- Now we need to give this user permission over the example_database database:
+
+        mysql> GRANT ALL ON example_database.* TO 'example_user'@'%';
+
+    This will give the example_user user full privileges over the example_database database, while preventing this user from creating or modifying other databases on your server.
+
+- Let's exit the MySQL shell with:
+`   exit`
+
+- Now we login to our example_database with the new example_user account created.
+
+        $ mysql -u example_user -p
+
+![Alt text](images/root-mysql.PNG)
+
+
+- Let's confirm we have access to example_database.
+
+        mysql> SHOW DATABASES;
+
+
+![Alt text](<images/show database.PNG>)
+
+
+- Next, we’ll create a test table named todo_list with the following statement:
+
+`CREATE TABLE example_database.todo_list (item_id INT AUTO_INCREMENT,content VARCHAR(255),PRIMARY KEY(item_id));`
+
+- Let's insert a few rows of content in the test table. We will repeat the next command a few times, using different VALUES:
+
+mysql> INSERT INTO example_database.todo_list (content) VALUES ("My first important item");
+
+- To confirm the data was sucessfully saved on your table, run:
+
+mysql>  SELECT * FROM example_database.todo_list;
+
+OUtput:
+
+![Alt text](<images/mysql product.PNG>)
+
+
+- we will exit MYSQL. `exit`
+
+- We will create a PHP script that will connect to MySQL and query the content. let's create a new PHP file in the custom web root directory.
+
+    $ nano /var/www/projectLEMP/todo_list.php
+
+
+![Alt text](<images/mysql script.PNG>)
+
+
+- Save and close Nano. :wq then press Enter.
+
+Mow lets access the todo_list.php page from our web browser
+
+http://<Public_domain_or_IP>/todo_list.php
+
+![Alt text](images/todo.PNG)
+
+
+*If you get an output like the picture above it shows the php environment can successfuy interaxt with the mysql database.*
+
+
+
+
+
 
 
 
