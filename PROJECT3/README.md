@@ -257,6 +257,19 @@ After editing, save and close the file. If you’re using nano, you can do so by
 
 `   Testing Nginx With PHP`
 
+- we can do this by creating a test PHP file in our document root. let's open a new file called info.php:
+
+![Alt text](<images/php code.PNG>)
+
+
+- we can now access this page in the web browser by visiting the domain name or public IP address set up in the Nginx configuration file, followed by /info.php:
+
+    http://server_domain_or_IP/info.php
+
+
+    ![Alt text](images/nginxphp.PNG)
+
+
 
 
 
