@@ -198,6 +198,68 @@ After succcessful password validation and confimation of login, you can exit MYS
 `   Exit`
 
 
+    4. **Installing php**
+
+ *We need to install php-fpm, which stands for “PHP fastCGI process manager”, and tell Nginx to pass PHP requests to this software for processing. Additionally, we need php-mysql, a PHP module that allows PHP to communicate with MySQL-based databases. Core PHP packages will automatically be installed as dependencies.*
+
+    sudo apt install php-fpm php-mysql -y
+
+
+`   Configuring Nginx to Use PHP Processor`
+
+- To configure Nginx to use PHP as a processor, you need to set up the FastCGI process manager (PHP-FPM) and configure Nginx to pass PHP requests to PHP-FPM.
+
+- We will create a folder called projectLEMP for our webserver. Create the root web directory for your_domain in /var/www/ folder as follows:
+
+     sudo mkdir /var/www/projectLEMP
+- Next, assign ownership of the directory with the $USER environment variable, which will reference your current system user:
+
+     $ sudo chown -R $USER:$USER /var/www/projectLEMP
+
+- Open a new configuration file in Nginx’s sites-available directory
+
+    $ sudo nano /etc/nginx/sites-available/projectLEMP
+
+![Alt text](<images/nginx script.PNG>)
+
+After editing, save and close the file. If you’re using nano, you can do so by typing CTRL+X and then y and ENTER to confirm.
+
+
+- Lets activate the configuration by linking the config file from Nginx’s sites-enabled directory, This will tell Nginx to use the configuration next time it is reloaded:
+
+    $ sudo ln -s /etc/nginx/sites-available/projectLEMP /etc/nginx/sites-enabled/
+
+- Let's test the configuration is working.
+
+    sudo nginx -t
+
+![Alt text](<images/nginx test.PNG>)
+
+
+- We need to disable default Nginx host that is currently configured to listen on port 80, for this run:
+
+    sudo unlink /etc/nginx/sites-enabled/default
+
+- Let's reload NGINX to apply these changes.
+
+    sudo systemctl reload nginx
+
+- Create an index.html file in the location /var/www/projectLEMP so that we can test that your new server block works as expected:
+
+    sudo echo 'Hello LEMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectLEMP/index.html
+
+- Now let's try to open your website URL from the browser using IP address or DNS name:
+
+    http://<Public-IP-Address>:80 or http://<Public-DNS-Name>:80
+
+**The LEMP stack is now fully configured. In the next step, we’ll create a PHP script to test that Nginx is in fact able to handle .php files within our newly configured website.**
+
+
+`   Testing Nginx With PHP`
+
+
+
+
 
 
 
