@@ -110,7 +110,7 @@ After succcessful password validation and confimation of login, you can exit MYS
 
     php -v
 
-   ![Alt text](<php version.PNG>) 
+  ![Alt text](<images/php version.PNG>) 
 
 
 
