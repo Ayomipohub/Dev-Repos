@@ -28,4 +28,62 @@ The LAMP stack is a popular open-source web development stack that consists of f
 
 1. **Launch an Ubuntu Instance on AWS Console and SSH Into From Your Terminal**
 
+![Alt text](<images/ssh apache.PNG>)
+
+### *ssh into your ubuntu Ec2 instance*
+    
+    ssh -i path/to/.pem ubuntu@public_ip_address
+    
+
+2. **Installating Apache**
+
+### update package lists and apt repositories
+
+    sudo apt update
+    
+### Install apache web server
+    sudo apt install apache2
+    
+### Allow firewall for apache
+    sudo ufw allow in "Apache"
+
+> NOTE: The step above will allow firewall for apache once it is enabled, it is important we allow firewall for ssh. ssh runs on port 22, if firewall is not allowed for ssh running on port 22, connection to the ubuntu instance via ssh will be permanently denied
+
+    sudo ufw allow 22
+
+### *Confirm Apache web server is sucessfully installed*
+
+    sudo systemctl status apache2
+
+![Alt text](<images/apache running.PNG>)
+
+To access your web server on your browser
+
+    http://ubuntu_instance_public_ip_address
+
+![Alt text](<images/apache page.PNG>)
+
+
+3. **Installating Mysql**
+
+mysql will be installed as a database to store data for our web application.
+
+    sudo apt install mysql-server
+
+### login into mysql consol
+
+ Log into mysql console as the root user
+
+        sudo mysql
+
+![Alt text](<images/sudo mysql.PNG>)
+
+
+### Setting up root password for root user using mysql native password
+
+`ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';`
+
+> Exit Mysql shell
+
+`   Exit`
 
