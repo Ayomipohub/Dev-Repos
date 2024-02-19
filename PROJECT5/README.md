@@ -17,6 +17,9 @@
 
 5. *Variables and Environment*: Shell scripts can use variables to store and manipulate data, making it possible to create dynamic and adaptable scripts. They also interact with the environment, using environment variables for configuration and communication with other processes.
 
+6. *File Handling*: Shell scripts can manipulate files and directories, perform file operations, and handle input/output operations. This is crucial for tasks like data processing, file manipulation, and system configuration.
+
+
 **Commonly Use Shell for Scripting**
 - Commonly used shells for scripting include Bash, sh (Bourne Shell), csh (C Shell), ksh (Korn Shell), and PowerShell (for Windows). The choice of shell depends on the specific requirements of the task, as well as the operating system environment in use.
 
@@ -67,7 +70,18 @@ iv. IT support and operations teams utilize shell scripting to fix problems, kee
 
     ![Alt text](<images/if con2.PNG>)
 
+    b. Loops: Loops allow you to repeat a block of code. for loops iterate over a list of items, while while loops continue executing as long as a specified condition is true.
+
+        for item in list; do
+          # commands
+        done
+
+        while [ condition ]; do
+            # commands
+        done
 
 
+![Alt text](images/loop.PNG)
 
-6. *File Handling*: Shell scripts can manipulate files and directories, perform file operations, and handle input/output operations. This is crucial for tasks like data processing, file manipulation, and system configuration.
+
+    
