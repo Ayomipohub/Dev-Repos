@@ -8,8 +8,13 @@
 
 ## **Getting Started With Shell Scripting**
 > Shell Scripting syntax Element
+
 > Working With Shell Scripting
+
 > Direct Manipulation and Navigation
+
 > File Operation and Sorting
+
 > Working With Numbers and Calculations
+
 > File Backup and Timestamping
