@@ -267,3 +267,7 @@ iv. IT support and operations teams utilize shell scripting to fix problems, kee
 > Output:
 
 ![Alt text](<images/back up.PNG>)
+
+
+
+***Thank you***
