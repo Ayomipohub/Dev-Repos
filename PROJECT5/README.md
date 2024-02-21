@@ -266,8 +266,8 @@ iv. IT support and operations teams utilize shell scripting to fix problems, kee
 
 > Output:
 
+![alt text](images/backup.PNG)
 
-![Alt text](images/backup.PNG)
 
 
 ***Thank you***
