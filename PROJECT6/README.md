@@ -63,3 +63,91 @@ In some of our previous projects like LAMP and LEMP stack, we implemented, a cli
 - *Data Consistency*:
     Because the server manages all data operations, data consistency is maintained. All clients access the same data, ensuring a consistent view of information.
 
+
+#### A Quick example of client serve communication is shown below:
+
+    $ curl -Iv www.propitixhomes.com
+
+- ubuntu terminal serve as the CLIENT while www.propitxhomes will be the SERVER
+
+ ![alt text](<images/Client ser example.PNG>)
+
+
+## **Implementing MySQL as a Client Server Architecture**
+
+Step 1: Launch 2 EC2 Instances on AWS
+i. Each instance should be named
+
+    Instance 1 - mysql server
+
+    Instance 2 - mysql client
+
+ii. Open 2 terminals and ssh into both "mysql server" "mysql client"
+
+Step 2: Updating and Upgrading Package Lists and Apt Repositories
+    On both mysql server and mysql client update and upgrade package lists
+
+    sudo apt update -y && sudo apt upgrade -y
+Note: The command above should be executed for mysql server and mysql client instances
+
+Step 3: Installing MySQL Server Software
+
+    sudo apt install mysql-server -y
+
+To start mysql service
+
+    sudo systemctl start mysql
+
+Check is mysql is active and running
+
+    sudo systemctl status mysql
+
+![alt text](images/server1.PNG)
+
+
+Step 4: Installing MySQL Client Sofware
+
+On mysql client instance install MySQL Client software.
+
+sudo apt install mysql-client -y
+
+![alt text](images/client1.PNG)
+
+
+Step 4: Allowing Access To MySQL Server for MySQl Client
+- By default, both of your EC2 virtual servers are located in the same local virtual network, so they can communicate to each other using local IP addresses. Or, you can add them to the same subnets.
+
+Use mysql server's local IP address to connect from mysql client. MySQL server uses TCP port 3306 by default, so you will have to open it by creating a new entry in ‘Inbound rules’ in ‘mysql server’ Security Groups. For extra security, do not allow all IP addresses to reach your ‘mysql server’ – allow access only to the specific local IP address of your ‘mysql client’.
+
+![alt text](images/3306.PNG)
+
+
+Step 5: Create A New User and Database On MySQL Server
+In order for mysql client to be able to send request to mysql server, we need to create a new user for mysql client and a database.
+
+i. Login to mysql server
+
+    sudo mysql
+
+ii. Create a new user
+
+    mysql>  CREATE USER 'example_user'@'%' IDENTIFIED WITH mysql_native_password BY 'PassWord.1';
+
+Note: The password field should be replaced wih your password
+
+iii. Create a database
+
+    CREATE DATABASE example_database;
+
+Step 6: Grant MySQL Client Administrative Prilvledges
+
+i. Grant privileges
+
+      mysql> GRANT ALL ON example_database.* TO 'example_user'@'%';
+
+Exit MySQL and restart the mySQL service using
+
+    sudo systemctl restart mysql
+
+![alt text](images/database.PNG)
+
