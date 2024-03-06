@@ -151,3 +151,33 @@ Exit MySQL and restart the mySQL service using
 
 ![alt text](images/database.PNG)
 
+
+Step 7: Configure MySQL server to Allow Connections From Remote Hosts.
+i. Edit mysql server configuration file
+
+    sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+
+![alt text](<images/mysql server script.PNG>)
+
+- In the mysqlserver configuration file, replace 127.0.0.1’ to ‘0.0.0.0, then save and close the file
+
+
+Step 8: Connecting To Mysql Server From Mysql Client
+i. Connect to mysql server from mysql client
+
+    mysql -u example_user -h <mysql_server_ privateipaddress> -p password
+
+ii. Check that you have successfully connected to a remote MySQL server and can perform SQL queries
+
+Client connection to mysql
+
+    show databases;
+
+
+![alt text](<images/show data.PNG>)
+
+
+> [!NOTE]
+> Install install mysql and secure installation for mysql
+
+*Thank you!*
