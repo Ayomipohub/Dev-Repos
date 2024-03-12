@@ -151,3 +151,43 @@ ii. Verify that Nginx is successfully installed
 iii. Edit Nginx load balancer configuration file
 
     sudo nano /etc/nginx/conf.d/loadbalancer.conf
+
+iv. Paste the configuration file below to configure nginx to act like a load balancer. A screenshot of an example config file is shown below: Make sure you edit the file and provide necessary information like your server IP address etc.
+
+  upstream backend_servers {
+
+        # your are to replace the public IP and Port to that of your webservers
+        server 3.128.168.233:8000; # public IP and port for webserser 1
+        server 18.118.144.126:8000; # public IP and port for webserver 2
+
+    }
+
+    server {
+        listen 80;
+        server_name 3.143.235.90; # provide your load balancers public IP address
+
+        location / {
+            proxy_pass http://backend_servers;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        }
+    }
+
+upstream backend_servers defines a group of backend servers. The server lines inside the upstream block list the addresses and ports of your backend servers. proxy_pass inside the location block sets up the load balancing, passing the requests to the backend servers. The proxy_set_header lines pass necessary headers to the backend servers to correctly handle the requests
+
+v. Test if nginx configuration is correct
+
+sudo nginx -t
+
+![alt text](<images/nginix test.PNG>)
+
+vi. Restart nginx
+
+    sudo systemctl restart nginx
+
+vii. Paste load balancer public Ip address on your web browser to see the content of web server 1 and 2
+
+![alt text](<images/LB confirmed.PNG>)
+
+***Thank you!***
