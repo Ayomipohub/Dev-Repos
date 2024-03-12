@@ -38,3 +38,116 @@ Some load balancers can maintain session persistence, ensuring that a user's req
 5. *SSL Termination*:
 
 Load balancers can handle SSL/TLS termination, offloading the encryption and decryption process from the application servers. This helps improve performance and simplifies the management of SSL certificates.
+
+
+## **Implementation of Load Balancers With Nginx**
+
+Step 1: Provisioning EC2 Instances
+We will provision 3 EC2 instance, two of these will be our webserver and one will be a load balancer
+
+i. Launch 2 EC2 instances and name each "webserver_1" and "webserver_2"
+
+ii. Launch another EC2 instance and name it "load balancer"
+
+
+Step 2: Open New Security Group For Both Webservers and load balancer
+
+i. For the webservers and load balancer, go to the security groups
+
+ii Edit inbound rules on open port 8000 for our both webserver_1 and webserver_2 and port 80 for our load balancer!
+
+[alt text](<images/port 8000.PNG>)
+
+iii. Allow traffic from anywhere on the open ports
+
+Step 3: Install Apache Webserver
+i. Open 2 termianls and ssh into webserver_1 and webserver_2
+
+
+ii. Update and upgrade package lists
+
+    sudo apt update -y && sudo apt upgrade -y
+
+iii. Install Apache
+
+    sudo apt install apache2 -y
+
+![alt text](<images/installed apache.PNG>)
+
+iv. Confirm Apache has been successfully installed
+
+    sudo systemctl status apache2
+
+ ![alt text](<images/apache is running.PNG>)   
+
+
+ Step 4: Configure Apache to Port 8000
+
+By default, apache listen on port 80. Since our load balancer will also be listening on port 80, we need to make our webservers listen on port 8000
+
+i. Edit port.conf file
+
+    sudo nano /etc/apache2/ports.conf
+
+ii. Add a new listen directive
+
+![alt text](<images/apache config.PNG>)
+
+
+iii. Add a new virtualhost statement since a new listen directive has been added
+
+    sudo nano /etc/apache2/sites-available/000-default.conf
+
+![alt text](<images/virtual host config.PNG>)    
+
+
+iv. Reload Apache
+
+sudo systemctl reload apache2
+
+Step 5: Configure Apache to Show Names Of Both Webservers
+
+i. open a new index.html file
+
+    sudo nano index.html
+
+ii. switch to nano editor and past the html file 
+
+![alt text](<images/html file.PNG>)
+
+iii. Change file ownership of index.html file
+
+    sudo chown www-data:www-data ./index.html
+
+iv. Overriding the default html file of Apache Webserver
+
+    sudo cp -f ./index.html /var/www/html/index.html
+
+v. Restart the webserver to load the new configuration
+
+    sudo systemctl restart apache2
+
+*Note*: This step should be done for both webserver1 and webserver 2
+
+![alt text](images/webserver1&2.PNG)
+
+
+Step 6: Install and Configure Nginx As A Load Balancer For Both WebServers
+
+In the step, we will configure nginx as a load balancer for webserver 1 and 2
+
+On our load balancer instance;
+
+i. Update package lists and instal nginx
+
+    sudo apt update -y && sudo apt install nginx -y
+
+ii. Verify that Nginx is successfully installed
+
+    sudo systemctl status nginx
+
+![alt text](<images/nginix installed.PNG>)
+
+iii. Edit Nginx load balancer configuration file
+
+    sudo nano /etc/nginx/conf.d/loadbalancer.conf
