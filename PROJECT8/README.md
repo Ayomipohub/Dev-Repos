@@ -104,7 +104,7 @@ i. Paste the shell script below in a file on webserver 1 and 2 instances to conf
 
     PUBLIC_IP=$1: The line PUBLIC_IP=$1 is a shell script command that assigns the value of the first command-line argument (denoted by $1) to a variable named PUBLIC_IP. This is a common practice in shell scripting to capture input parameters passed to a script when it is executed.
 
-    rgument Check: The script checks if the PUBLIC_IP variable is empty and prints an error message if it is, along with usage instructions. If the IP is missing, the script exits with an error code.
+    Argument Check: The script checks if the PUBLIC_IP variable is empty and prints an error message if it is, along with usage instructions. If the IP is missing, the script exits with an error code.
 
     Update and Install Apache: The script updates the package list with sudo apt update -y and installs the Apache web server with sudo apt install apache2 -y.
 
