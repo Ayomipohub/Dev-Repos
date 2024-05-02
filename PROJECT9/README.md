@@ -172,7 +172,11 @@ Update /etc/fstab in this format using your own UUID and rememeber to remove the
 Test the configuration and reload the daemon
 
  sudo mount -a
+ 
  sudo systemctl daemon-reload
+
+![alt text](<images/daemon reload.PNG>)
+
 
 Verify your setup by running df -h, output must look like this:
 
