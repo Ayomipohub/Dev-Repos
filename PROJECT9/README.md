@@ -107,8 +107,8 @@ Your 3-Tier Setup
 
 12. Use lvcreate utility to create 2 logical volumes. apps-lv (Use half of the PV size), and logs-lv Use the remaining space of the PV size. NOTE: apps-lv will be used to store data for the Website while, logs-lv will be used to store data for logs.
     
-    sudo lvcreate -n apps-lv -L 14G webdata-vg
-    sudo lvcreate -n logs-lv -L 14G webdata-vg
+sudo lvcreate -n apps-lv -L 14G webdata-vg
+sudo lvcreate -n logs-lv -L 14G webdata-vg
 
 ![alt text](<images/logical vols.PNG>)
 
@@ -122,34 +122,34 @@ Your 3-Tier Setup
 
 15. Use mkfs.ext4 to format the logical volumes with ext4 filesystem
     
-    sudo mkfs -t ext4 /dev/webdata-vg/apps-lv
-    sudo mkfs -t ext4 /dev/webdata-vg/logs-lv
+sudo mkfs -t ext4 /dev/webdata-vg/apps-lv
+sudo mkfs -t ext4 /dev/webdata-vg/logs-lv
 
 ![alt text](<images/format LV.PNG>)
 
 16. Create /var/www/html directory to store website files
     
-    sudo mkdir -p /var/www/html
+sudo mkdir -p /var/www/html
 
 17. Create /home/recovery/logs to store backup of log data
 
-    sudo mkdir -p /home/recovery/logs
+sudo mkdir -p /home/recovery/logs
 
 18. Mount /var/www/html on apps-lv logical volume
     
-    sudo mount /dev/webdata-vg/apps-lv /var/www/html/
+sudo mount /dev/webdata-vg/apps-lv /var/www/html/
 
 19. Use rsync utility to backup all the files in the log directory /var/log into /home/recovery/logs (This is required before mounting the file system)
     
-    sudo rsync -av /var/log/. /home/recovery/logs/
+sudo rsync -av /var/log/. /home/recovery/logs/
 
 20. Mount /var/log on logs-lv logical volume. (Note that all the existing data on /var/log will be deleted. That is why step 15 above is very important)
     
-    sudo mount /dev/webdata-vg/logs-lv /var/log
+sudo mount /dev/webdata-vg/logs-lv /var/log
 
 21. Restore log files back into /var/log directory
 
-    sudo rsync -av /home/recovery/logs/. /var/log
+sudo rsync -av /home/recovery/logs/. /var/log
 
 ![alt text](<images/restore log files.PNG>)
 
