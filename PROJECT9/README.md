@@ -46,3 +46,21 @@ lvdisplay: Displays information about logical volumes.
 
 3. Backup Systems: LVM snapshots can be used for creating consistent backups of data without interrupting ongoing operations.
 
+
+## Implementing Wordpress Web Solution
+Three-tier Architecture Generally, web, or mobile solutions are implemented based on what is called the Three-tier Architecture.
+
+Three-tier Architecture is a client-server software architecture pattern that comprise of 3 separate layers.
+
+Your 3-Tier Setup
+
+- A Laptop or PC to serve as a client
+- An EC2 Linux Server as a web server (This is where you will install WordPress)
+- An EC2 Linux server as a database (DB) serve
+
+1. Create an AWS instance using RedHat Distribution
+    The EC2 instance will serve as a Web Server, create 3 volumes in the same AZ as the Web Srver EC2, each of 10GB.
+
+2. Attach the three volumes one by one to your Webserver EC2 instance
+
+![alt text](<images/db volumes.PNG>)   ![alt text](<images/attached vol.PNG>)
