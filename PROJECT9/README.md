@@ -122,8 +122,8 @@ Your 3-Tier Setup
 
 15. Use mkfs.ext4 to format the logical volumes with ext4 filesystem
     
-    sudo mkfs -t ext4 /dev/webdata-vg/apps-lv
-    sudo mkfs -t ext4 /dev/webdata-vg/logs-lv
+sudo mkfs -t ext4 /dev/webdata-vg/apps-lv
+sudo mkfs -t ext4 /dev/webdata-vg/logs-lv
 
 ![alt text](<images/format LV.PNG>)
 
