@@ -78,7 +78,7 @@ Your 3-Tier Setup
 
 6. Use gdisk utility to create a single partition on each of the 3 disks
 
-    sudo gdisk /dev/xvdf
+`sudo gdisk /dev/xvdf`
 
 ![alt text](images/vdh.PNG)   ![alt text](images/vdp.PNG)     ![alt text](images/xvdf.PNG)
 
@@ -96,9 +96,9 @@ Your 3-Tier Setup
 
 10. Use vgcreate utility to add all 3 PVs to a volume group (VG). Name the VG webdata-vg
 
-    sudo vgcreate webdata-vg /dev/xvdh1 /dev/xvdg1 /dev/xvdf1
+`sudo vgcreate webdata-vg /dev/xvdh1 /dev/xvdg1 /dev/xvdf1`
 
-![alt text](<volume grp.PNG>)
+![alt text](<images/volume grp.PNG>)
 
 11. verify that VG has been created
 
@@ -107,8 +107,8 @@ Your 3-Tier Setup
 
 12. Use lvcreate utility to create 2 logical volumes. apps-lv (Use half of the PV size), and logs-lv Use the remaining space of the PV size. NOTE: apps-lv will be used to store data for the Website while, logs-lv will be used to store data for logs.
     
-sudo lvcreate -n apps-lv -L 14G webdata-vg
-sudo lvcreate -n logs-lv -L 14G webdata-vg
+    sudo lvcreate -n apps-lv -L 14G webdata-vg
+    sudo lvcreate -n logs-lv -L 14G webdata-vg
 
 ![alt text](<images/logical vols.PNG>)
 
@@ -122,34 +122,36 @@ sudo lvcreate -n logs-lv -L 14G webdata-vg
 
 15. Use mkfs.ext4 to format the logical volumes with ext4 filesystem
     
-sudo mkfs -t ext4 /dev/webdata-vg/apps-lv
-sudo mkfs -t ext4 /dev/webdata-vg/logs-lv
+    sudo mkfs -t ext4 /dev/webdata-vg/apps-lv
+    sudo mkfs -t ext4 /dev/webdata-vg/logs-lv
 
 ![alt text](<images/format LV.PNG>)
 
 16. Create /var/www/html directory to store website files
     
-sudo mkdir -p /var/www/html
+`sudo mkdir -p /var/www/html`
 
 17. Create /home/recovery/logs to store backup of log data
 
-sudo mkdir -p /home/recovery/logs
+`sudo mkdir -p /home/recovery/logs`
 
 18. Mount /var/www/html on apps-lv logical volume
     
-sudo mount /dev/webdata-vg/apps-lv /var/www/html/
+`sudo mount /dev/webdata-vg/apps-lv /var/www/html/`
 
 19. Use rsync utility to backup all the files in the log directory /var/log into /home/recovery/logs (This is required before mounting the file system)
     
-sudo rsync -av /var/log/. /home/recovery/logs/
+`sudo rsync -av /var/log/. /home/recovery/logs/`
+
+![alt text](<images/backup all fines befor mounting.PNG>)
 
 20. Mount /var/log on logs-lv logical volume. (Note that all the existing data on /var/log will be deleted. That is why step 15 above is very important)
     
-sudo mount /dev/webdata-vg/logs-lv /var/log
+`sudo mount /dev/webdata-vg/logs-lv /var/log`
 
 21. Restore log files back into /var/log directory
 
-sudo rsync -av /home/recovery/logs/. /var/log
+`sudo rsync -av /home/recovery/logs/. /var/log`
 
 ![alt text](<images/restore log files.PNG>)
 
@@ -167,3 +169,153 @@ Update /etc/fstab in this format using your own UUID and rememeber to remove the
 
 ![alt text](<images/update etc fstab file.PNG>)
 
+Test the configuration and reload the daemon
+
+ sudo mount -a
+ sudo systemctl daemon-reload
+
+Verify your setup by running df -h, output must look like this:
+
+![alt text](<images/df -h confirmed.PNG>)
+
+
+### Prepare the Database Server
+
+Launch a second RedHat EC2 instance that will have a role – ‘DB Server’ Repeat the same steps as for the Web Server, but instead of apps-lv create db-lv and mount it to var/www/db directory instead of /var/www/html/.
+
+
+## Install WordPress On EC2 WebServer
+Update the repository
+
+sudo yum -y update
+
+![alt text](<images/yum update.PNG>)
+
+
+**Install wget, Apache and it’s dependencies**
+
+`sudo yum -y install wget httpd php php-mysqlnd php-fpm php-json`
+
+![alt text](<images/install widget.PNG>)
+
+
+**Start Apache**
+
+    sudo systemctl enable httpd
+    sudo systemctl start httpd
+
+![alt text](<images/httpd enabled.PNG>)
+
+
+**To install PHP and it’s depemdencies**
+
+sudo yum install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+sudo yum install yum-utils http://rpms.remirepo.net/enterprise/remi-release-8.rpm
+sudo yum module list php
+sudo yum module reset php
+sudo yum module enable php:remi-7.4
+sudo yum install php php-opcache php-gd php-curl php-mysqlnd
+sudo systemctl start php-fpm
+sudo systemctl enable php-fpm
+setsebool -P httpd_execmem 1
+
+![alt text](<images/install php & con.PNG>)
+
+
+
+Restart Apache
+
+`sudo systemctl restart httpd`
+
+**Download Wrdpress and Copy Wordpress to var/www/html**
+
+mkdir wordpress
+cd   wordpress
+sudo wget http://wordpress.org/latest.tar.gz
+sudo tar xzvf latest.tar.gz
+sudo rm -rf latest.tar.gz
+cp wordpress/wp-config-sample.php wordpress/wp-config.php
+cp -R wordpress /var/www/html/
+
+
+**Configure SELinux Policies**
+
+sudo chown -R apache:apache /var/www/html/wordpress
+sudo chcon -t httpd_sys_rw_content_t /var/www/html/wordpress -R
+sudo setsebool -P httpd_can_network_connect=1
+
+
+## Install MySQL On EC2 DB Server
+
+sudo yum update
+sudo yum install mysql-server -y
+
+![alt text](<images/mysql server.PNG>)
+
+Verify that the service is up and running by using sudo systemctl status mysqld, if it is not running, restart the service and enable it so it will be running even after reboot:
+
+sudo systemctl restart mysqld
+sudo systemctl enable mysqld
+
+Configure DB To Work With WordPress
+
+sudo mysql
+
+CREATE DATABASE wordpress;
+
+CREATE USER `myuser`@`<Web-Server-Private-IP-Address>` IDENTIFIED BY 'mypass';
+
+GRANT ALL ON wordpress.* TO 'myuser'@'<Web-Server-Private-IP-Address>';
+
+FLUSH PRIVILEGES;
+
+SHOW DATABASES;
+
+exit
+
+
+![alt text](<images/show database.PNG>)
+
+**Configure WordPress To Connect To Remote Database.**
+Edit inbound rule and open port 3306 on database server and allow connection from only our database server.
+
+![alt text](images/http.PNG)
+
+Install MySQL client and test that you can connect from your Web Server to your DB server by using mysql-client
+
+sudo yum install mysql
+sudo mysql -u admin -p -h <DB-Server-Private-IP-address>
+
+![alt text](<images/client DB.PNG>)
+
+Verify if you can successfully execute SHOW DATABASES; command and see a list of existing databases.
+
+**Change permissions and configuration so Apache could use WordPress**:
+
+Enable TCP port 80 in Inbound Rules configuration for your Web Server EC2 (enable from everywhere 0.0.0.0/0 or from your workstation’s IP)
+
+#### Verify Database Credentials
+Check the wp-config.php file in your WordPress webserver to ensure that the database credentials are correct.
+
+sudo nano /var/www/html/wordpress/wp-config.php
+
+Verify the values below
+
+define('DB_NAME', 'wordpress');
+define('DB_USER', 'myuser');
+define('DB_PASSWORD', 'mypass');
+define('DB_HOST', 'database_private_ipaddress');
+
+Try to access from your browser the link to your WordPress http://<Web-Server-Public-IP-Address>/wordpress/
+
+![alt text](images/1-db.PNG)       ![alt text](images/2-db.PNG)
+
+![alt text](images/3-db.PNG)         ![alt text](images/4-db.PNG)
+
+
+
+Conclusion
+In conclusion, this project has provided a comprehensive guide to implementing a WordPress website with LVM storage management. Key takeaways include:
+
+Understanding the fundamentals of LVM, such as physical volumes, volume groups, and logical volumes.
+Recognizing the benefits of LVM, including dynamic resizing, striping, mirroring, and snapshots.
