@@ -261,22 +261,16 @@ Verify that the service is up and running by using sudo systemctl status mysqld,
 sudo systemctl restart mysqld
 sudo systemctl enable mysqld
 ```
-Configure DB To Work With WordPress
-
+#### Configure DB To Work With WordPress
+```
 sudo mysql
-
 CREATE DATABASE wordpress;
-
 CREATE USER `myuser`@`<Web-Server-Private-IP-Address>` IDENTIFIED BY 'mypass';
-
 GRANT ALL ON wordpress.* TO 'myuser'@'<Web-Server-Private-IP-Address>';
-
 FLUSH PRIVILEGES;
-
 SHOW DATABASES;
-
 exit
-
+```
 
 ![alt text](<images/show database.PNG>)
 
