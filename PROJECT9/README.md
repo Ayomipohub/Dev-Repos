@@ -121,10 +121,10 @@ Your 3-Tier Setup
 ![alt text](<images/display VG^LV.PNG>)       ![alt text](<images/VG^LV contd.PNG>)
 
 15. Use mkfs.ext4 to format the logical volumes with ext4 filesystem
-    
+```   
 sudo mkfs -t ext4 /dev/webdata-vg/apps-lv
 sudo mkfs -t ext4 /dev/webdata-vg/logs-lv
-
+```
 ![alt text](<images/format LV.PNG>)
 
 16. Create /var/www/html directory to store website files
