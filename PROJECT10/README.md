@@ -160,6 +160,7 @@ sudo systemctl restart nfs-server.service
 ```
 
 - Configure access to NFS for clients within the same subnet (example of Subnet CIDR – 172.31.32.0/20):
+
 ```
 sudo nano /etc/exports
 
@@ -190,6 +191,7 @@ STEP 2 – CONFIGURE THE DATABASE SERVER
  sudo apt install mysql
 
 2. Create a database and name it tooling
+
 ```
  sudo mysql
  create database tooling;
@@ -223,6 +225,7 @@ sudo yum install nfs-utils nfs4-acl-tools -y
 ![alt text](<images/nfs client.PNG>)
 
 3. Mount /var/www/ and target the NFS server’s export for apps
+
 ```
 sudo mkdir /var/www
 sudo mount -t nfs -o rw,nosuid <NFS-Server-Private-IP-Address>:/mnt/apps /var/www
@@ -239,6 +242,7 @@ add following line;
 ![alt text](<images/df -h nfs.PNG>)
 
 5. Install Remi’s repository, Apache and PHP
+
 ```
 sudo yum install httpd -y
 
@@ -288,6 +292,7 @@ Note 2: If you encounter 403 Error – check permissions to your /var/www/html f
 To make this change permanent – open following config file sudo vi /etc/sysconfig/selinux and set SELINUX=disabled then restart httpd.
 
 ![alt text](images/selinux.PNG)
+
 ```
 sudo systemctl restart httpd
 sudo systemctl status httpd
@@ -311,6 +316,7 @@ Then edit the mysqld.cnf file
     sudo vi /etc/mysql/mysql.conf.d//mysqld.cnf
 
 ![alt text](<images/binding ip.PNG>)
+
 ```
 sudo systemctl restart mysql
 
