@@ -288,10 +288,43 @@ Note 2: If you encounter 403 Error – check permissions to your /var/www/html f
 To make this change permanent – open following config file sudo vi /etc/sysconfig/selinux and set SELINUX=disabled then restart httpd.
 
 ![alt text](images/selinux.PNG)
+```
+sudo systemctl restart httpd
+sudo systemctl status httpd
+```
 
+10. Update the website’s configuration to connect to the database (in /var/www/html/functions.php file). Apply 
+tooling-db.sql script to your database using this command mysql -h -u -p < tooling-db.sql
 
+$db = mysqli_connect('172.31.20.138', 'webaccess', 'mypasskey', 'tooling');
 
+- Install MySQL on the web servers using sudo yum install mysql -y then cd into the tooling directory to connect to thhe database.
 
+ sudo mysql -h 172.31.20.138 -u webaccess -p tooling < tooling-db.sql
+
+If you can't connect to it and there is an error simply move to the DB server to edit the inbound security group.
+
+![alt text](images/mysql-inbound.PNG)
+
+Then edit the mysqld.cnf file
+
+    sudo vi /etc/mysql/mysql.conf.d//mysqld.cnf
+
+![alt text](<images/binding ip.PNG>)
+```
+sudo systemctl restart mysql
+
+sudo systemctl status mysql
+```
+
+11. Create in MySQL a new admin user with username: myuser and password: password:
+INSERT INTO ‘users’ (‘id’, ‘username’, ‘password’, ’email’, ‘user_type’, ‘status’) VALUES -> (1, ‘myuser’, ‘5f4dcc3b5aa765d61d8327deb882cf99’, ‘user@mail.com’, ‘admin’, ‘1’);
+
+![alt text](<images/db results.PNG>)
+
+12. Open the website in your browser http:///index.php and make sure you can login into the websute with myuser user.
+
+![alt text](<images/tooling login.PNG>)            ![alt text](<images/tooling product.PNG>)
 
 
 
