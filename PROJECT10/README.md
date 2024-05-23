@@ -57,12 +57,12 @@ In this project you will implement a solution that consists of following compone
 STEP 1 – PREPARE NFS SERVER
 1. Spin up a new EC2 instance with RHEL Linux 8 Operating System.
 
-![alt text](<images/nfs cloud.PNG>)
+![alt text](<images/nfs server.PNG>)
 
 2. Based on your LVM experience from Project 6, Configure LVM on the Server.
 - create volumes for the NFS server
 
-![alt text](<images/nfs cloud.PNG>)
+![alt text](images/nfs-vol.PNG)
 
 ![alt text](images/nfs-lsblk.PNG)
 
