@@ -97,7 +97,7 @@ Mount lv-logs on /mnt/logs – To be used by webserver logs
 
 Mount lv-opt on /mnt/opt – To be used by Jenkins server in Project 8
 
-`
+```
 sudo mkdir /mnt/apps
 
 sudo mkdir /mnt/logs
@@ -109,7 +109,7 @@ sudo mount /dev/webdata-vg/lv-apps /mnt/apps
 sudo mount /dev/webdata-vg/lv-logs /mnt/logs
 
 sudo mount /dev/webdata-vg/lv-opt /mnt/opt
-`
+```
 
 - Once mount is completed run sudo blkid to get the UUID of the mount part, open and paste the UUID in the fstab file.
 
@@ -118,13 +118,13 @@ sudo mount /dev/webdata-vg/lv-opt /mnt/opt
 Edit fstab file and paste the UUID of the mount part
 
       sudo vi /etc/fstab
-    `
+    ```
     sudo mount -a 
     sudo systemctl daemon-reload
-    `
+    ```
 
 4. Install NFS server, configure it to start on reboot and make sure it is u and running
-`
+```
 sudo yum -y update
 
 sudo yum install nfs-utils -y
@@ -134,5 +134,5 @@ sudo systemctl start nfs-server.service
 sudo systemctl enable nfs-server.service
 
 sudo systemctl status nfs-server.service
-`
+```
 ![alt text](<images/nfs server-active.PNG>)
