@@ -333,5 +333,6 @@ INSERT INTO ‘users’ (‘id’, ‘username’, ‘password’, ’email’, 
 ![alt text](<images/tooling login.PNG>)            ![alt text](<images/tooling product.PNG>)
 
 
+***THANK YOU***
 
 
