@@ -104,3 +104,69 @@ sudo systemctl status jenkins
 
 ![alt text](<images/jenkins port.PNG>)
 
+### Set up Jenkins
+
+i. Input your Jenkins-Ansible Instance ip address on your web browser i.e. http://public_ip_address:8080
+
+ii. On your Jenkins-Ansible instance, check "/var/lib/jenkins/secrets/initialAdminPassword" to know your password.
+
+![alt text](<images/jenkins login.PNG>)
+
+iii. Installed suggested plugins
+
+iv. Create a user account
+
+v. Log in to jenkins console
+
+![alt text](<images/jenkins dashboard.PNG>)
+
+
+## Confiure Jenkins To Receive Source Code From ansible-cofig-mgt
+
+i. Allow webhook in our github repository. In ansible-config-mgt repository, navigate to settings>webhooks and past the url of jenkins.
+
+![alt text](images/webhook.PNG)
+
+
+ii. Create a freestyle project in your jenkins web account and name it "ansible_automation"
+
+iii. Connect jenkins to ansible-config-mgt repository by pasting the repository url in the area selected below
+
+![alt text](<images/git-link jenkins.PNG>)
+
+v. Save configuration and run "build now" to connect jenkins to our repository
+
+![alt text](<images/new build.PNG>)
+
+
+v. Click "Configure" your job and add these two configurations
+
+Configure triggering the job from GitHub webhook and Configure "Post-build Actions" to archive all the files. 
+
+![alt text](images/artifact.PNG)
+
+click on add post-build actions and click "Archive the Artifact" then save
+
+Now, go ahead and make some change in any file in your GitHub repository (e.g. README.MD file) and push the changes to the master branch.
+
+You will see that a new build has been launched automatically (by webhook) and you can see its results – artifacts, saved on Jenkins server.
+
+
+vi. Test your setup by making some change in README.MD file in master branch and make sure that builds starts automatically and Jenkins saves the files (build artifacts) in following folder
+
+ls /var/lib/jenkins/jobs/ansible/builds/<build_number>/archive/
+
+![alt text](images/builds.PNG)
+
+Note: Trigger Jenkins project execution only for /main (main) branch.
+
+Now your setup will look like this:
+
+![alt text](images/outcome.PNG)
+
+
+
+
+
+
+
