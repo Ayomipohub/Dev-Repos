@@ -284,3 +284,54 @@ Update your playbooks/common.yml file with following code:
 ```
 
 Examine the code above and try to make sense out of it. This playbook is divided into two parts, each of them is intended to perform the same task: install wireshark utility (or make sure it is updated to the latest version) on your RHEL 8 and Ubuntu servers. It uses root user to perform this task and respective package manager: yum for RHEL 8 and apt for Ubuntu.
+
+### Step 6 – Update GIT with the latest code
+
+Push all the changes made to the directories and files from local machine to Github.
+
+Commit your code into GitHub:
+
+use git commands to add, commit and push your branch to GitHub.
+
+```
+git status
+
+git add <selected files>
+
+git commit -m "commit message"
+```
+
+push changes to a remote repositories
+
+git push
+
+Wear the hat of another developer for a second, and act as a reviewer.
+
+If the reviewer is happy with your new feature development, merge the code to the master branch on your local computer, commit and push changes to your remote repository.
+
+Once your code changes appear in master branch - Jenkins will do its job and save all the files (build artifacts) to /var/lib/jenkins/jobs/ansible/builds/<build_number>/archive/ directory on Jenkins-Ansible server as we configured it to in Step 2
+
+![alt text](<images/jenkins build up.PNG>)
+
+## RUN FIRST ANSIBLE TEST
+### Step 7 – Run first Ansible test
+
+Now, it is time to execute ansible-playbook command and verify if your playbook actually works:
+
+Connect to your jenkins-ansible server via VScode (configure the .ssh/config file with your jenkins server information)
+
+ansible-playbook -i /var/lib/jenkins/jobs/ansible/builds/<build-number>/archive/inventory/dev.yml /var/lib/jenkins/jobs/ansible/builds/<build-number>/archive/playbooks/common.yml
+
+![alt text](images/ansible-product.PNG)
+
+
+Feel free to update this playbook with following tasks:
+
+Create a directory and a file inside it Change timezone on all servers Run some shell script
+
+
+![alt text](<images/update an-product.PNG>)
+
+At the end of this project we have implemented a solution that is shown below
+
+![alt text](<images/impliment soln.PNG>)
