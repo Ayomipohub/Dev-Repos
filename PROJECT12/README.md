@@ -92,3 +92,20 @@ Examples:
     - import_role:
         name: nginx
 ```
+
+### Importance Of Refactoring, Assignment And Imports
+Effective Ansible usage is critical for organizations aiming to automate infrastructure management and application deployment. Refactoring promotes code clarity, reducing errors and easing collaboration. Assignments empower playbooks with dynamic capabilities, adapting to diverse scenarios. Imports enable the reuse of well-defined components, fostering modularity and scalability. Mastery of these concepts enhances productivity, making Ansible an indispensable asset in the DevOps toolbox.
+
+## Refactor Ansible Code By Importing Other Playbooks Into site.yml
+Step 1: Jenkins Job Enhancement
+In the previous project, we create a jenkins build job, let us make some changes to our Jenkins job. Now every new change in the codes creates a separate directory which is not very convenient when we want to run some commands from one place. Besides, it consumes space on Jenkins server with each subsequent change. Let us enhance it by introducing a new Jenkins job - we will require Copy Artifact plugin.
+
+i. Go to your Jenkins-Ansible server and create a new directory called ansible-config-artifact - we will store there all artifacts after each build.
+
+sudo mkdir /home/ubuntu/ansible-config-artifact
+
+ii. Change permissions to this directory, so Jenkins could save files there.
+
+chmod -R 0777 /home/ubuntu/ansible-config-artifact
+
+![alt text](<images/new artifact conf.PNG>)
