@@ -204,10 +204,10 @@ sudo yum -y update
 
 
 **Start Apache**
-
+    ```
     sudo systemctl enable httpd
     sudo systemctl start httpd
-
+    ```
 ![alt text](<images/httpd enabled.PNG>)
 
 
