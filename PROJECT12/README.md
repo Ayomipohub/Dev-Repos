@@ -292,6 +292,9 @@ Within the static-assignments folder, create a new assignment for uat-webservers
      - webserver
 ```
 
+![alt text](images/roles.PNG)
+
+
 Remember that the entry point to our ansible configuration is the site.yml file. Therefore, you need to refer your uat-webservers.yml role inside site.yml.
 
 So, we should have this in site.yml
